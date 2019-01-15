@@ -1,91 +1,51 @@
-ul.heroes {
-    margin: 0;
-    padding: 0;
+/* HeroesComponent's private CSS styles */
+.heroes {
+    margin: 0 0 2em 0;
     list-style-type: none;
-    
-    li {
-        float: left;
-        clear: left;
-        background-color: lighten($color: #CCC, $amount: 10%);
-        margin: 0.3rem;
-        border-radius: 5px;
-        cursor: pointer;
-
-        div {
-            float: left;
-            span, label {
-                padding: 1rem;
-                float: left;
-                cursor: pointer;
-            }
-
-            span {
-                background-color: darken($color: rgb(67, 96, 124), $amount: 0);
-                border-top-left-radius: 5px;
-                border-bottom-left-radius: 5px;
-                min-width: 1.5rem;
-                color: white;
-            }
-        }
-
-        &:hover{
-            background-color: lighten($color: rgb(67, 96, 124), $amount: 50%);
-            color: white;
-
-            div{
-                span{
-                    background-color: darken($color: rgb(67, 96, 124), $amount: 10%);
-                }
-            }
-        }
-
-        &.selected {
-            background-color: darken($color: #CCC, $amount: 10%);
-
-            div {
-                span {
-                    background-color: darken($color: rgb(67, 96, 124), $amount: 20%);
-                }
-            }
-        }
-    }
-
-    /*
-    li {
-        margin: 1.2rem;
-        float: left;
-        clear: both;
-        border-radius: 5px;
-        cursor: pointer;
-
-        span.badge, label{
-            padding: 1rem;
-            background-color: darken($color: #CCC, $amount: 0);
-            transition: all ease-in-out .1s;
-        }
-
-        span.badge {
-            color: white;
-            background-color: darken($color: rgb(67, 96, 124), $amount: 0);
-        }
-
-        &:hover{
-            label {
-                background-color: darken($color: #CCC, $amount: 5%);
-            }
-            span.badge {
-                background-color: darken($color: rgb(67, 96, 124), $amount: 5%);
-            }   
-        }
-
-        /*
-        div {
-            background-color: darken($color: #CCC, $amount: 0);
-            .span, .badge { 
-                padding: 1rem;
-            }
-            .badge {
-            }
-        }*/
-    /*}*/
-}
+    padding: 0;
+    width: 15em;
+  }
+  .heroes li {
+    position: relative;
+    cursor: pointer;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+  }
+  
+  .heroes li:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+  }
+  
+  .heroes a {
+    color: #888;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    width: 250px;
+  }
+  
+  .heroes a:hover {
+    color:#607D8B;
+  }
+  
+  .heroes .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #607D8B;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    min-width: 16px;
+    text-align: right;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
